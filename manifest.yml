@@ -1,0 +1,11 @@
+---
+applications:
+ - name: authcode-war
+   host: authcode
+   memory: 1g
+   instances: 1
+   path: target/identity-authcode-war-0.1.war
+   buildpack: java_buildpack_offline
+   env:
+     SKIP_SSL_VALIDATION: "true"
+     GRANT_TYPE: authorization_code
